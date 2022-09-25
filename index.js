@@ -1,6 +1,11 @@
 const yargs = require('yargs');
 const { hideBin } = require('yargs/helpers');
-const { listContacts, getContactById, addContact, removeContact } = require('./contacts');
+const {
+  listContacts,
+  getContactById,
+  addContact,
+  removeContact,
+} = require('./contacts');
 
 const arr = hideBin(process.argv);
 const { argv } = yargs(arr);
