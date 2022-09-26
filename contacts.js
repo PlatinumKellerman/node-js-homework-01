@@ -25,7 +25,7 @@ const addContact = async data => {
     ...data,
   };
   contacts.push(newContact);
-  updateContacts(contacts);
+  await updateContacts(contacts);
   return newContact;
 };
 
@@ -37,7 +37,7 @@ const removeContact = async id => {
     return null;
   }
   const [result] = contacts.splice(index, 1);
-  updateContacts(contacts);
+  await updateContacts(contacts);
   return result;
 };
 
